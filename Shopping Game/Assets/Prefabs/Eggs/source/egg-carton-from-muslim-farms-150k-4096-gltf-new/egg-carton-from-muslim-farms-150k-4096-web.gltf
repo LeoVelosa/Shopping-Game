@@ -1,0 +1,142 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 83849,
+      "max": [
+        0.146522000432014,
+        0.0349760316312313,
+        0.0560990013182163
+      ],
+      "min": [
+        -0.146521002054214,
+        -0.0349744111299515,
+        -0.0561002790927887
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 83849,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 83849,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5125,
+      "count": 450000,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "generator": "MeshSmith mesh conversion tool",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 1006188,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1006188,
+      "byteOffset": 1006188,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 670792,
+      "byteOffset": 2012376,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1800000,
+      "byteOffset": 2683168,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 4483168,
+      "uri": "egg-carton-from-muslim-farms-150k-4096-web.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "egg-carton-from-muslim-farms-150k-4096-diffuse.jpg"
+    },
+    {
+      "uri": "egg-carton-from-muslim-farms-150k-4096-occlusion.jpg"
+    },
+    {
+      "uri": "egg-carton-from-muslim-farms-150k-4096-normals.jpg"
+    }
+  ],
+  "materials": [
+    {
+      "name": "default",
+      "normalTexture": {
+        "index": 2
+      },
+      "occlusionTexture": {
+        "index": 1
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.100000001490116,
+        "roughnessFactor": 0.800000011920929
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "source": 0
+    },
+    {
+      "source": 1
+    },
+    {
+      "source": 2
+    }
+  ]
+}
