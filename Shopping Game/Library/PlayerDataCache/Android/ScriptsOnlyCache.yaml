@@ -47,8 +47,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 65
-      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 102
@@ -58,11 +56,9 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11472}
+      Script: {instanceID: 11474}
     - Class: 114
-      Script: {instanceID: 11478}
-    - Class: 114
-      Script: {instanceID: 11826}
+      Script: {instanceID: 11828}
     - Class: 114
       Script: {instanceID: 12346}
     - Class: 115
@@ -71,15 +67,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
+    - Class: 135
+      Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 224
       Script: {instanceID: 0}
     Assets/Scenes/2-3Transition.unity:
     - Class: 1
@@ -100,8 +92,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 65
-      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 102
@@ -111,11 +101,9 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11472}
+      Script: {instanceID: 11474}
     - Class: 114
-      Script: {instanceID: 11478}
-    - Class: 114
-      Script: {instanceID: 11826}
+      Script: {instanceID: 11828}
     - Class: 114
       Script: {instanceID: 12346}
     - Class: 115
@@ -124,15 +112,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
+    - Class: 135
+      Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 224
       Script: {instanceID: 0}
     Assets/Scenes/Both Loss.unity:
     - Class: 1
@@ -154,17 +138,17 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11262}
+      Script: {instanceID: 11264}
     - Class: 114
-      Script: {instanceID: 11432}
+      Script: {instanceID: 11434}
     - Class: 114
-      Script: {instanceID: 11478}
+      Script: {instanceID: 11480}
     - Class: 114
-      Script: {instanceID: 11744}
+      Script: {instanceID: 11746}
     - Class: 114
-      Script: {instanceID: 11826}
+      Script: {instanceID: 11828}
     - Class: 114
-      Script: {instanceID: 11904}
+      Script: {instanceID: 11906}
     - Class: 114
       Script: {instanceID: 12866}
     - Class: 114
@@ -205,17 +189,17 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11262}
+      Script: {instanceID: 11264}
     - Class: 114
-      Script: {instanceID: 11432}
+      Script: {instanceID: 11434}
     - Class: 114
-      Script: {instanceID: 11478}
+      Script: {instanceID: 11480}
     - Class: 114
-      Script: {instanceID: 11744}
+      Script: {instanceID: 11746}
     - Class: 114
-      Script: {instanceID: 11826}
+      Script: {instanceID: 11828}
     - Class: 114
-      Script: {instanceID: 11904}
+      Script: {instanceID: 11906}
     - Class: 114
       Script: {instanceID: 12866}
     - Class: 114
@@ -256,17 +240,17 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11262}
+      Script: {instanceID: 11264}
     - Class: 114
-      Script: {instanceID: 11432}
+      Script: {instanceID: 11434}
     - Class: 114
-      Script: {instanceID: 11478}
+      Script: {instanceID: 11480}
     - Class: 114
-      Script: {instanceID: 11744}
+      Script: {instanceID: 11746}
     - Class: 114
-      Script: {instanceID: 11826}
+      Script: {instanceID: 11828}
     - Class: 114
-      Script: {instanceID: 11904}
+      Script: {instanceID: 11906}
     - Class: 114
       Script: {instanceID: 12866}
     - Class: 114
@@ -323,19 +307,19 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11262}
+      Script: {instanceID: 11264}
     - Class: 114
-      Script: {instanceID: 11432}
+      Script: {instanceID: 11434}
     - Class: 114
-      Script: {instanceID: 11472}
+      Script: {instanceID: 11474}
     - Class: 114
-      Script: {instanceID: 11478}
+      Script: {instanceID: 11480}
     - Class: 114
-      Script: {instanceID: 11744}
+      Script: {instanceID: 11746}
     - Class: 114
-      Script: {instanceID: 11826}
+      Script: {instanceID: 11828}
     - Class: 114
-      Script: {instanceID: 11904}
+      Script: {instanceID: 11906}
     - Class: 114
       Script: {instanceID: 12346}
     - Class: 114
@@ -398,19 +382,19 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11262}
+      Script: {instanceID: 11264}
     - Class: 114
-      Script: {instanceID: 11432}
+      Script: {instanceID: 11434}
     - Class: 114
-      Script: {instanceID: 11472}
+      Script: {instanceID: 11474}
     - Class: 114
-      Script: {instanceID: 11478}
+      Script: {instanceID: 11480}
     - Class: 114
-      Script: {instanceID: 11744}
+      Script: {instanceID: 11746}
     - Class: 114
-      Script: {instanceID: 11826}
+      Script: {instanceID: 11828}
     - Class: 114
-      Script: {instanceID: 11904}
+      Script: {instanceID: 11906}
     - Class: 114
       Script: {instanceID: 12346}
     - Class: 114
@@ -473,19 +457,19 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11262}
+      Script: {instanceID: 11264}
     - Class: 114
-      Script: {instanceID: 11432}
+      Script: {instanceID: 11434}
     - Class: 114
-      Script: {instanceID: 11472}
+      Script: {instanceID: 11474}
     - Class: 114
-      Script: {instanceID: 11478}
+      Script: {instanceID: 11480}
     - Class: 114
-      Script: {instanceID: 11744}
+      Script: {instanceID: 11746}
     - Class: 114
-      Script: {instanceID: 11826}
+      Script: {instanceID: 11828}
     - Class: 114
-      Script: {instanceID: 11904}
+      Script: {instanceID: 11906}
     - Class: 114
       Script: {instanceID: 12346}
     - Class: 114
@@ -532,17 +516,17 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11262}
+      Script: {instanceID: 11264}
     - Class: 114
-      Script: {instanceID: 11432}
+      Script: {instanceID: 11434}
     - Class: 114
-      Script: {instanceID: 11478}
+      Script: {instanceID: 11480}
     - Class: 114
-      Script: {instanceID: 11744}
+      Script: {instanceID: 11746}
     - Class: 114
-      Script: {instanceID: 11826}
+      Script: {instanceID: 11828}
     - Class: 114
-      Script: {instanceID: 11904}
+      Script: {instanceID: 11906}
     - Class: 114
       Script: {instanceID: 12866}
     - Class: 114
@@ -583,17 +567,17 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11262}
+      Script: {instanceID: 11264}
     - Class: 114
-      Script: {instanceID: 11432}
+      Script: {instanceID: 11434}
     - Class: 114
-      Script: {instanceID: 11478}
+      Script: {instanceID: 11480}
     - Class: 114
-      Script: {instanceID: 11744}
+      Script: {instanceID: 11746}
     - Class: 114
-      Script: {instanceID: 11826}
+      Script: {instanceID: 11828}
     - Class: 114
-      Script: {instanceID: 11904}
+      Script: {instanceID: 11906}
     - Class: 114
       Script: {instanceID: 12866}
     - Class: 114
@@ -785,7 +769,7 @@ ScriptsOnlyBuild:
     className: TransitionArmModel
   - hash:
       serializedVersion: 2
-      Hash: 989c8c0fd656e4da2b6527ac8d54419b
+      Hash: defffc71d275be2cb8f1274b848ec4a3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LevelManager
@@ -861,12 +845,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: TSD.Assets
     className: Gamepad_Controller
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: TransitionScript
   - hash:
       serializedVersion: 2
       Hash: d4020bafcd3ccbb5601a6e6c8ac78be0
@@ -1019,7 +997,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 92c9be6fc571f5a525b344e3fe5de495
+      Hash: 27b4a2308ccf8ddb65b9e47e2648009e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GazeOverEvent
@@ -1167,4 +1145,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/1-2Transition.unity
   - Assets/Scenes/Level 3.unity
   - Assets/Scenes/2-3Transition.unity
-  playerPath: C:/Users/leona/Documents/GitHub/ProgrammingAssignment2/Scavenger Hunt/Grocery.apk
+  playerPath: C:/Users/leona/Documents/GitHub/ProgrammingAssignment2/Scavenger Hunt/ShoppingGame.apk

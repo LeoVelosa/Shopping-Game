@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 53808
+  controlID: 1094
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 53809
+  controlID: 1068
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 53810
+  controlID: 1069
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -397,9 +397,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 464e0e00
-      m_LastClickedID: 937542
-      m_ExpandedIDs: ca20fdff2e23fdff882cfdff7855fdff0256fdff6a58fdff5c5cfdfff670fdffa87afdff907cfdff447dfdff1c7efdfffe80fdff5881fdff4e84fdffbe85fdffae88fdff2699fdffaca4fdffe2a5fdfffea5fdffb4a6fdffbca6fdffc2a6fdffc6a6fdffcaa6fdffcea6fdffd2a6fdffcaa8fdffc2aafdffc6aafdffeeadfdff4cb0fdffdcb2fdffecb2fdff0ab9fdff42c1fdff70c3fdffa4c5fdffbcc8fdfff6d0fdff50d4fdffeedefdff36e5fdff40e7fdff80eafdff50edfdff00eefdff98f4fdff68f5fdffc6f6fdffb6f8fdff34fdfdff42fdfdffd8fdfdff8811feff2023feff642efeff2231feff4e43feff0655feff3659feff3666fefffe77feff8e89feff268ffeffec91feff80a3feff06b5feff4cb8feff2ec1feffd8d2feff4ed5feff2edcfeff2ae3feff2ae8feffa0f9feff0efefeff78fffeff80fffeff88fffeffe6fffefff6fffeff4205ffff461bffff341cffff621cffff261fffff3e37ffffb439ffff3e41ffff7650ffff9050ffff4651ffff4a51ffff4e51ffff5251ffff5651ffff4e53ffff4c55ffff5055ffffa85bffff626effff327fffffbebbffffc8bbfffffcbbfffffebbffff2abcffff2cbcffff5abcffff80bcffff84bcffffb8bcffffe8bcffffa4bdffffc2bdffffc6bdffff30bfffff32bfffff60c1ffffc4f3ffffd6f5ffff28f7ffff46f7fffffcf7ffff00f8ffff04f8ffff08f8ffff0cf8ffff36f9ffff3ef9ffff42f9ffff68fbfffff4ffffff24fe02008e65050068690500b8690500086a0500e86a0500c26d05003e6f05007c6f0500806f05002a7005005e7105004a9f060096c7070050220800d4ab080096ac08007cbc080016bd080092bd080092e708000c0409005e260900accd090050d30900ded409009cb20b007cb50b0000b70b0088b80b0028f80b00745e0c0014890c000a900c00
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 8ac4ffffa6c4ffffaac4ffffb2c4ffffb8c4ffffbcc4ffffc0c4ffffc4c4ffffc8c4ffffc0c6ffffb8c8ffffbcc8ffff7acbffffeacdffff54d0ffff24d2ffff3ed2fffff6d2fffff2d4fffffcd4ffff04d5ffff0cd5ffff14d5ffff1cd5ffff18d7ffff1ad9ffff22d9ffffe6e4ffffdce9ffffb0f2ffff3ef5ffff96f7ffff68fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -609,15 +609,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Scenes
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\leona\Documents\GitHub\ProgrammingAssignment2\Scavenger
-    Hunt
+  m_LastProjectPath: C:\Users\leona\Documents\GitHub\Shopping-Game\Shopping Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 6e460000
-    m_LastClickedID: 18030
-    m_ExpandedIDs: 00000000184600001a4600001c4600001e46000020460000224600002446000026460000284600002a4600002c4600002e46000030460000324600003446000036460000384600003a460000
+    m_SelectedIDs: e0470000
+    m_LastClickedID: 18400
+    m_ExpandedIDs: 00000000824700008447000086470000884700008a4700008c4700008e47000090470000924700009447000096470000984700009a4700009c4700009e470000a0470000a2470000a4470000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -645,7 +644,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000184600001a4600001c4600001e46000020460000224600002446000026460000284600002a4600002c4600002e46000030460000324600003446000036460000384600003a460000
+    m_ExpandedIDs: 00000000824700008447000086470000884700008a4700008c4700008e47000090470000924700009447000096470000984700009a4700009c4700009e470000a0470000a2470000a4470000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -672,7 +671,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000967301000000000058fe0200
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -793,7 +792,7 @@ MonoBehaviour:
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 100
+  m_LastVerticalScrollValue: 0
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52

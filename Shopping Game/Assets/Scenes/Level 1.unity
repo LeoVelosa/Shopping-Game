@@ -505,7 +505,6 @@ MonoBehaviour:
       m_Calls: []
   l: {fileID: 0}
   price: 5
-  spent: 0
   priceText: {fileID: 0}
   pauseText: {fileID: 0}
   paused: 0
@@ -613,7 +612,6 @@ MonoBehaviour:
       m_Calls: []
   l: {fileID: 0}
   price: 4
-  spent: 0
   priceText: {fileID: 0}
   pauseText: {fileID: 0}
   paused: 0
@@ -2448,7 +2446,6 @@ MonoBehaviour:
       m_Calls: []
   l: {fileID: 0}
   price: 3
-  spent: 0
   priceText: {fileID: 0}
   pauseText: {fileID: 0}
   paused: 0
@@ -6551,7 +6548,6 @@ MonoBehaviour:
       m_Calls: []
   l: {fileID: 0}
   price: 6
-  spent: 0
   priceText: {fileID: 0}
   pauseText: {fileID: 0}
   paused: 0
@@ -8215,7 +8211,6 @@ MonoBehaviour:
       m_Calls: []
   l: {fileID: 0}
   price: 6
-  spent: 0
   priceText: {fileID: 0}
   pauseText: {fileID: 0}
   paused: 0
@@ -13382,7 +13377,6 @@ MonoBehaviour:
       m_Calls: []
   l: {fileID: 0}
   price: 5
-  spent: 0
   priceText: {fileID: 0}
   pauseText: {fileID: 0}
   paused: 0
@@ -14453,7 +14447,6 @@ MonoBehaviour:
       m_Calls: []
   l: {fileID: 0}
   price: 5
-  spent: 0
   priceText: {fileID: 0}
   pauseText: {fileID: 0}
   paused: 0
@@ -18735,7 +18728,6 @@ MonoBehaviour:
       m_Calls: []
   l: {fileID: 0}
   price: 7
-  spent: 0
   priceText: {fileID: 0}
   pauseText: {fileID: 0}
   paused: 0
@@ -23299,7 +23291,6 @@ MonoBehaviour:
       m_Calls: []
   l: {fileID: 0}
   price: 1000000
-  spent: 0
   priceText: {fileID: 0}
   pauseText: {fileID: 0}
   paused: 0
@@ -23317,10 +23308,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c288efa3416389748b5dd250f49d8c93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goal: 3
   timer: 60
-  s: 
-  total: 0
+  stringHolder: 
+  totalPaid: 0
   score: 0
   inPB: 0
   inCereal: 0
@@ -23338,15 +23328,6 @@ MonoBehaviour:
   budgetText: {fileID: 0}
   levelText: {fileID: 0}
   goalText: {fileID: 0}
-  pb: {fileID: 7446674977841850129, guid: 0903d7899638a7e43be23d2c3e8105d4, type: 3}
-  jelly: {fileID: 8842850761616063990, guid: f89db8517bddbf34384116ef82c2e322, type: 3}
-  bread: {fileID: 1328331500545230578, guid: 1e8d11bbbf4f56a4398dd003e5f299da, type: 3}
-  cereal: {fileID: 919132149155446097, guid: 6e0f7cf0f78302f4fae96110327b1a90, type: 3}
-  milk: {fileID: 919132149155446097, guid: d8823365a8a5a6b42a5660fc34a415db, type: 3}
-  pasta: {fileID: 1913478149909026329, guid: 245d1773c30bcaf40b0d10429b7bed80, type: 3}
-  chicken: {fileID: 6306754761468972529, guid: 36b2f3e0b40635244b8d7ed9c20381d1, type: 3}
-  eggs: {fileID: 8701675245584300627, guid: 2493769ffdff6f84dbcd550d7ae470c5, type: 3}
-  bacon: {fileID: 919132149155446097, guid: 9da4d93be82dc604aa85af995bbaa126, type: 3}
   spawnInt: 0
   rotationSpeed: 0
 --- !u!4 &1484448606
@@ -25034,7 +25015,6 @@ MonoBehaviour:
       m_Calls: []
   l: {fileID: 0}
   price: 2
-  spent: 0
   priceText: {fileID: 0}
   pauseText: {fileID: 0}
   paused: 0
@@ -25408,7 +25388,6 @@ MonoBehaviour:
       m_Calls: []
   l: {fileID: 0}
   price: 3
-  spent: 0
   priceText: {fileID: 0}
   pauseText: {fileID: 0}
   paused: 0
@@ -27751,7 +27730,6 @@ MonoBehaviour:
       m_Calls: []
   l: {fileID: 0}
   price: 0
-  spent: 0
   priceText: {fileID: 0}
   pauseText: {fileID: 0}
   paused: 0
@@ -27879,7 +27857,6 @@ MonoBehaviour:
       m_Calls: []
   l: {fileID: 0}
   price: 0
-  spent: 0
   priceText: {fileID: 0}
   pauseText: {fileID: 0}
   paused: 0
@@ -29366,7 +29343,6 @@ MonoBehaviour:
       m_Calls: []
   l: {fileID: 0}
   price: 4
-  spent: 0
   priceText: {fileID: 0}
   pauseText: {fileID: 0}
   paused: 0
@@ -30122,7 +30098,6 @@ MonoBehaviour:
       m_Calls: []
   l: {fileID: 0}
   price: 3
-  spent: 0
   priceText: {fileID: 0}
   pauseText: {fileID: 0}
   paused: 0

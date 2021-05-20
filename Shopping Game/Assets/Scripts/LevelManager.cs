@@ -6,13 +6,24 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
-    public int goal = 3;
+    //Timer
     public float timer = 60.0f;
+
+    //Used to hold the item names and prices the player buys
     public Dictionary<string, int> items;
-    public Dictionary<string, GameObject> test;
-    public string s;
-    public int total;
+
+    //Used to hold gameObjects the player buys so that they get displayed in the transition scene
+    public Dictionary<string, GameObject> gameObjectHolder;
+
+    public string stringHolder;
+
+    //Total amount of money the player paid at the end of the level
+    public int totalPaid;
+
+    //Used to hold score of the player
     public int score;
+
+    //Booleans to stop infinite loops
     public bool inPB = false;
     public bool inCereal = false;
     public bool inPasta = false;
@@ -23,30 +34,32 @@ public class LevelManager : MonoBehaviour
     public bool inBB = false;
     public bool inTransition1 = false;
     public bool inTransition2 = false;
+
+    //In game text variables
     public Text timerText;
     public Text receipt;
     public Text transitionText;
     public Text budgetText;
     public Text levelText;
     public Text goalText;
-    public GameObject pb;
-    public GameObject jelly;
-    public GameObject bread;
-    public GameObject cereal;
-    public GameObject milk;
-    public GameObject pasta;
-    public GameObject chicken;
-    public GameObject eggs;
-    public GameObject bacon;
+
+    //Integer used to spawn gameObjects in transition scenes
     public int spawnInt;
+
+    //Float used to set speed of gameObject rotation in transition scenes
     public float rotationSpeed;
 
-    // Initializes item dictionary
+    // Initializes many variables
     void Start()
     {
+        //Initializes rotation speed for transition scene
         rotationSpeed = 0.1f;
+
+        //Initializes both dictionaries
         items = new Dictionary<string, int>();
-        test = new Dictionary<string, GameObject>();
+        gameObjectHolder = new Dictionary<string, GameObject>();
+
+        //Initializes in game text
         if(SceneManager.GetActiveScene().name == "Level 1" || SceneManager.GetActiveScene().name == "Level 2" || SceneManager.GetActiveScene().name == "Level 3")
         {
             timerText = GameObject.Find("Timer").GetComponent<Text>();
@@ -55,20 +68,26 @@ public class LevelManager : MonoBehaviour
             levelText = GameObject.Find("Level Text").GetComponent<Text>();
             goalText = GameObject.Find("Goal").GetComponent<Text>();
         }
+
+        //Initializes budget text for level 2 & 3
         if (SceneManager.GetActiveScene().name == "Level 2" || SceneManager.GetActiveScene().name == "Level 3")
         {
             budgetText = GameObject.Find("Budget").GetComponent<Text>();
         }
     }
 
-    // Starts timer count down & makes click start functionality for intro scene
+    // Used for any functions that need to be constantly checked for
     void Update()
     {
+        //Starts timer countdown
         timer -= Time.deltaTime;
+
+        //Sets click start for intro scene
         if (SceneManager.GetActiveScene().name == "Intro" && XRInputManager.IsButtonDown())
         {
             SceneManager.LoadScene("Level 1");
         }
+        //Sets click restart for end scenes
         if (SceneManager.GetActiveScene().name == "Win Scene" && XRInputManager.IsButtonDown())
         {
             SceneManager.LoadScene("Level 1");
@@ -85,55 +104,74 @@ public class LevelManager : MonoBehaviour
         {
             SceneManager.LoadScene("Level 1");
         }
+
+        //Checks if in transition scene from level 1 to 2
         if(SceneManager.GetActiveScene().name == "1-2Transition" && inTransition1 == false)
         {
+            //spawns items the player bought
             setTransitionScene();
+
+            //sets boolean to true so this if statement only gets called once
             inTransition1 = true;
         }
+
+        //Checks if in transition scene from level 2 to 3
         if (SceneManager.GetActiveScene().name == "2-3Transition" && inTransition2 == false)
         {
+            //spawns items the player bought
             setTransitionScene();
+
+            //sets boolean to true so this if statement only gets called once
             inTransition2 = true;
         }
+
+        //Checks if in either transition scenes to set the objects rotation and constantly update it
         if(SceneManager.GetActiveScene().name == "1-2Transition" || SceneManager.GetActiveScene().name == "2-3Transition")
         {
-            foreach (KeyValuePair<string, GameObject> entry in test)
+            //Iterates through items the user bought and sets their rotation
+            foreach (KeyValuePair<string, GameObject> entry in gameObjectHolder)
             {
-                entry.Value.transform.Rotate(new Vector3(0, rotationSpeed,0),Space.Self);
+                entry.Value.transform.Rotate(new Vector3(0, rotationSpeed, 0), Space.Self);
             }
         }
+
+        //Destroys all items in "DontDestroyOnLoad" Scene to set up level 2
         if (SceneManager.GetActiveScene().name == "1-2Transition" && XRInputManager.IsButtonDown())
         {
-            
+            //Loads level 2
             SceneManager.LoadScene("Level 2");
-            foreach (KeyValuePair<string, GameObject> entry in test)
+
+            //Iterates through items in the transition scene and destroys them
+            foreach (KeyValuePair<string, GameObject> entry in gameObjectHolder)
             {
                 Destroy(entry.Value);
             }
+
+            //Destroys the level manager in the "DontDestroyOnLoad" scene
             Destroy(this.gameObject);
         }
+        //Destroys all items in "DontDestroyOnLoad" Scene to set up level 3
         if (SceneManager.GetActiveScene().name == "2-3Transition" && XRInputManager.IsButtonDown())
         {
-
+            //Loads level 3
             SceneManager.LoadScene("Level 3");
-            foreach (KeyValuePair<string, GameObject> entry in test)
+
+            //Iterates through items in the transition scene and destroys them
+            foreach (KeyValuePair<string, GameObject> entry in gameObjectHolder)
             {
                 Destroy(entry.Value);
             }
+            //Destroys the level manager in the "DontDestroyOnLoad" scene
             Destroy(this.gameObject);
         }
 
-    }
-
-    // Makes UI for game
-    void OnGUI()
-    {
         //Create UI timer in top left of screen for Level 1 & 2
         if (SceneManager.GetActiveScene().name == "Level 1" || SceneManager.GetActiveScene().name == "Level 2" || SceneManager.GetActiveScene().name == "Level 3")
         {
             timerText.text = "Time left: " + Mathf.Round(timer);
         }
 
+        //Functions check if in the designated level and sets it
         setLevel1();
         setLevel2();
         setLevel3();
@@ -142,41 +180,60 @@ public class LevelManager : MonoBehaviour
         //Once timer hits 0, checks how many meals were made and makes your receipt. Also gives you some transition text
         if (timer <= 0 && SceneManager.GetActiveScene().name == "Level 1")
         {
+            //Stops timer
             Time.timeScale = 0.0f;
 
+            //Calls meal check function
             checkMealsLevel2();
 
+            //Creates on screen receipt
             Receipt();
 
+            //Sets transition text
             transitionText.text = "Great practice! \nNext round you must stay below a budget.\nClick to move to Level 2!";
 
-            if (XRInputManager.IsButtonDown() && SceneManager.GetActiveScene().name == "Level 1")
+            //Checks if button is clicked then sends player to transition scene
+            if (XRInputManager.IsButtonDown())
             {
+                /* 
+                 * Keeps level manager from level 1 and moves it to transition scene because it holds
+                 * the dictionary that contains all the items the player bought in level 1.
+                 */
                 DontDestroyOnLoad(this.gameObject);
+
+                //Loads transition scene
                 SceneManager.LoadScene("1-2Transition");
             }
         }
+
         //**************************************************Level 2***********************************************************************
-        //Once timer hits 0, Checks how many meals were made and makes your receipt. Then gives you the proper end scene based on
-        //or pushes you to level 3
+        /*
+         * Once timer hits 0, Checks how many meals were made and makes your receipt. Then gives you the proper end scene
+         * based on performance or pushes you to level 3 if you passed.
+         */
         if (timer <= 0 && SceneManager.GetActiveScene().name == "Level 2")
         {
+            //Stops timer
             Time.timeScale = 0.0f;
 
+            //Calls meal check function
             checkMealsLevel2();
 
+            //Creates on screen receipt
             Receipt();
 
+            //Sets transition text
             transitionText.text = "Click to see if you made it to level 3!";
 
-            //Win
-            if (score >= 3 && total < 35 && XRInputManager.IsButtonDown())
+            //The next couple if statements check for win/loss conditions
+            //Win - player moves on to level 3
+            if (score >= 3 && totalPaid < 35 && XRInputManager.IsButtonDown())
             {
                 DontDestroyOnLoad(this.gameObject);
                 SceneManager.LoadScene("2-3Transition");
             }
             //Over budget
-            else if (XRInputManager.IsButtonDown() && total > 35)
+            else if (XRInputManager.IsButtonDown() && totalPaid > 35)
             {
                 SceneManager.LoadScene("Budget Loss");
             }
@@ -186,29 +243,38 @@ public class LevelManager : MonoBehaviour
                 SceneManager.LoadScene("Score Loss");
             }
             //Not enough meals and over budget
-            else if (XRInputManager.IsButtonDown() && score < 3 && total > 35)
+            else if (XRInputManager.IsButtonDown() && score < 3 && totalPaid > 35)
             {
                 SceneManager.LoadScene("Both Loss");
             }
         }
-        //Level 3
+        //**************************************************Level 3***********************************************************************
+        /*
+         * Once timer hits 0, Checks how many meals were made and makes your receipt.
+         * Then gives you the proper end scene based on performance.
+         */
         if (timer <= 0 && SceneManager.GetActiveScene().name == "Level 3")
         {
+            //Stops timer
             Time.timeScale = 0.0f;
 
+            //Calls meal check function
             checkMealsLevel3();
 
+            //Creates on screen receipt
             Receipt();
 
+            //Sets transition text
             transitionText.text = "Click to see if you passed level 3!";
 
+            //The next couple if statements check for win/loss conditions
             //Win
-            if (score >= 4 && total < 40 && XRInputManager.IsButtonDown())
+            if (score >= 4 && totalPaid < 40 && XRInputManager.IsButtonDown())
             {
                 SceneManager.LoadScene("Win Scene");
             }
             //Over budget
-            else if (XRInputManager.IsButtonDown() && total > 40)
+            else if (XRInputManager.IsButtonDown() && totalPaid > 40)
             {
                 SceneManager.LoadScene("Budget Loss");
             }
@@ -218,22 +284,24 @@ public class LevelManager : MonoBehaviour
                 SceneManager.LoadScene("Score Loss");
             }
             //Not enough meals and over budget
-            else if (XRInputManager.IsButtonDown() && score < 4 && total > 40)
+            else if (XRInputManager.IsButtonDown() && score < 4 && totalPaid > 40)
             {
                 SceneManager.LoadScene("Both Loss");
             }
         }
     }
 
+    //Sets level text and goal text
     public void setLevel1()
     {
         if (SceneManager.GetActiveScene().name == "Level 1")
         {
             levelText.text = "Level 1";
-            goalText.text = "Goal: 3/4 recipes";
+            goalText.text = "Goal: practice";
         }
     }
-    //Resets timer for level 2 and makes budget UI text
+
+    //Resets timer for level 2 and sets all the necessary text for level 2
     public void setLevel2()
     {
         if (SceneManager.GetActiveScene().name == "Level 2")
@@ -244,6 +312,8 @@ public class LevelManager : MonoBehaviour
             Time.timeScale = 1.0f;
         }
     }
+
+    //Resets timer for level 2 and sets all the necessary text for level 3
     public void setLevel3()
     {
         if (SceneManager.GetActiveScene().name == "Level 3")
@@ -254,17 +324,30 @@ public class LevelManager : MonoBehaviour
             Time.timeScale = 1.0f;
         }
     }
+
+    //Sets transition scene
     public void setTransitionScene()
     {
+        //sets the spawn variable to 0
         spawnInt = 0;
-        foreach(KeyValuePair<string,GameObject> entry in test)
+
+        //iterates through items the player bought
+        foreach(KeyValuePair<string,GameObject> entry in gameObjectHolder)
         {
+            //sets the items x position to the spawn int and a y&z of 0
             entry.Value.gameObject.transform.position = new Vector3(spawnInt, 0, 0);
-            Renderer[] t = entry.Value.GetComponentsInChildren<Renderer>();
-            for(int i = 0; i < t.Length; i++)
+
+            //Grabs all the items children mesh renderers
+            Renderer[] itemsChildren = entry.Value.GetComponentsInChildren<Renderer>();
+
+            //iterates through the items children mesh renderers
+            for(int i = 0; i < itemsChildren.Length; i++)
             {
-                t[i].enabled = true;
+                //Sets the items childrens mesh renderers to true since they were set to false in the previous scene
+                itemsChildren[i].enabled = true;
             }
+
+            //Adds 2 to the spawn integer so the items are spaced out
             spawnInt += 2;
         }
     }
@@ -277,19 +360,20 @@ public class LevelManager : MonoBehaviour
             //Makes string with name of item and its price
             foreach (KeyValuePair<string, int> entry in items)
             {
-                s += entry.Key + " $" + entry.Value + "\n";
-                total += entry.Value;
+                stringHolder += entry.Key + " $" + entry.Value + "\n";
+                totalPaid += entry.Value;
             }
             //Makes total price
-            s += "\ntotal price: $" + total;
+            stringHolder += "\ntotal price: $" + totalPaid;
             inFE = true;
         }
         //Creates UI for receipt
         if (items.Count > 0)
         {
-            receipt.text = "Receipt:\n\n" + s + "\nScore: " + score;
+            receipt.text = "Receipt:\n\n" + stringHolder + "\nScore: " + score;
         }
     }
+
     //Checks if all the ingredients for each meal were bought
     public void checkMealsLevel2()
     {
@@ -321,6 +405,8 @@ public class LevelManager : MonoBehaviour
             inEB = true;
         }
     }
+
+    //Checks if all the ingredients for each meal were bought
     public void checkMealsLevel3()
     {
         //PB&J
@@ -351,12 +437,14 @@ public class LevelManager : MonoBehaviour
             inEB = true;
         }
 
+        //Salad
         if (items.ContainsKey("Tomatos") && items.ContainsKey("Lettuce") && items.ContainsKey("Carrots") && inSalad == false)
         {
             score += 1;
             inSalad = true;
         }
 
+        //Banana bread
         if (items.ContainsKey("Bread") && items.ContainsKey("Bananas") && inBB == false)
         {
             score += 1;
